@@ -1,0 +1,26 @@
+{
+  "name": "Upload-Data-from-Excel",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.14"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-branch": "cds watch --open branch/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/branch",
+    "app/branch",
+    "app/branch"
+  ]
+}
