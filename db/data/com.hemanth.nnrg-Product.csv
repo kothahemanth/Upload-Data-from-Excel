@@ -1,0 +1,7 @@
+ID,product_id,product_name,product_img,product_cost,product_sell
+7d20f688-99a5-4354-9c8f-934bcc0a1b60,201,Tablet,https://i.imgur.com/G1uWz0f.png,10000,17000
+85a05c37-e97c-4615-b0af-5853432e284a,202,Phone,https://i.imgur.com/TFvXgQi_d.jpg,18000,22000
+b4f1ac39-3c64-4d44-a4c1-b252a9ee0cc7,203,headphones,"https://imgur.com/h5SepjO.png",150,249
+f1c2ed58-8653-4d7c-9f55-fd9281d4d129,204,Smartwatch,"https://imgur.com/9aXPF9m.png",100,199
+e57f89d2-9007-4a34-8946-4a2a051da629,205,Laptop,"https://i.imgur.com/tSgFVQg_d.jpg",50,99
+
