@@ -118,6 +118,7 @@
           "options": {
             "settings": {
               "contextPath": "/Product",
+              "entitySet": "Product",
               "variantManagement": "Page",
               "navigation": {
                 "Product": {
@@ -130,6 +131,14 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable"
+                  },
+                  "actions": {
+                    "spreadsheetUpload": {
+                      "id": "spreadsheetUploadListReportButton",
+                      "text": "Upload",
+                      "press": "project1.ext.ListPageExtController.openSpreadsheetUploadDialog",
+                      "requiresSelection": false
+                    }
                   }
                 }
               }

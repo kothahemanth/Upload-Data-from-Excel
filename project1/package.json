@@ -33,6 +33,7 @@
   "sapuxLayer": "CUSTOMER_BASE",
   "ui5": {
     "dependencies": [
+      "ui5-cc-spreadsheetimporter",
       "ui5-cc-spreadsheetimporter"
     ]
   }
