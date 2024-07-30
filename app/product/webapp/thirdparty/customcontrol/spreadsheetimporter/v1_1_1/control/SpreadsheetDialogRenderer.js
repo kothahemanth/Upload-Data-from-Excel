@@ -1,0 +1,2 @@
+"use strict";sap.ui.define(["sap/m/DialogRenderer"],function(e){"use strict";var r={render:function(r,n){e.render.apply(this,arguments)}};return r});
+//# sourceMappingURL=SpreadsheetDialogRenderer.js.map

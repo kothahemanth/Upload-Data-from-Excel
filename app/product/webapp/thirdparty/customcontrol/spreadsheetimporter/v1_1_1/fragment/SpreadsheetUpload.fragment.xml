@@ -1,0 +1,55 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:upload="sap.ui.unified" xmlns:spreadsheetdialog="cc.spreadsheetimporter.v1_1_1.control">
+  <spreadsheetdialog:SpreadsheetDialog
+    contentWidth="{= ${device>/system/phone} ? '100%' : '40vw' }"
+    contentHeight="{= ${info>/densityClass} === 'sapUiSizeCompact' ? '110px' : '120px'}"
+    verticalScrolling="false"
+  >
+    <spreadsheetdialog:customHeader>
+      <OverflowToolbar>
+        <Title text="{i18n>spreadsheetimporter.spreadsheetupload}" />
+        <ToolbarSpacer />
+        <Button press="showPreview" text="{i18n>spreadsheetimporter.showPreview}" visible="{= !${info>/hidePreview}}" enabled="{= ${info>/dataRows} > 0}" />
+        <Button press="onTempDownload" text="{i18n>spreadsheetimporter.downloadTemplate}" visible="{= !${info>/hideGenerateTemplateButton}}" />
+        <Button press="onOpenOptionsDialog" icon="sap-icon://action-settings" visible="{= ${info>/showOptions}}" />
+      </OverflowToolbar>
+    </spreadsheetdialog:customHeader>
+    <spreadsheetdialog:content>
+      <VBox>
+        <MessageStrip
+          xmlns:core="sap.ui.core"
+          core:require="{ formatMessage: 'sap/base/strings/formatMessage' }"
+          text="{
+        parts: [
+          'i18n>spreadsheetimporter.dataRows',
+          'info>/dataRows'
+        ],
+        formatter: 'formatMessage'
+      }"
+          type="{= ${info>/dataRows} > 0 ? 'Success' : 'Information'}"
+          enableFormattedText="true"
+          showIcon="true"
+        >
+          <layoutData>
+            <FlexItemData growFactor="1" styleClass="centeredFlex" />
+          </layoutData>
+        </MessageStrip>
+        <upload:FileUploader
+          placeholder="{i18n>spreadsheetimporter.spreadsheetuploadPlaceholder}"
+          fileType="xlsx,xls,csv,xlsm"
+          change="onFileUpload"
+          sameFilenameAllowed="true"
+          width="100%"
+          value="{info>/fileUploadValue}"
+        >
+          <upload:layoutData>
+            <FlexItemData growFactor="5" styleClass="centeredFlex" />
+          </upload:layoutData>
+        </upload:FileUploader>
+      </VBox>
+    </spreadsheetdialog:content>
+    <spreadsheetdialog:buttons>
+      <Button text="{i18n>spreadsheetimporter.upload}" press="onUploadSet" type="Emphasized" enabled="{= ${info>/dataRows} > 0}" />
+      <Button press="onCloseDialog" text="{i18n>spreadsheetimporter.close}" />
+    </spreadsheetdialog:buttons>
+  </spreadsheetdialog:SpreadsheetDialog>
+</core:FragmentDefinition>
